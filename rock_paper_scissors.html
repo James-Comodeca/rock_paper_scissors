@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+    <body>
+    <script>
+
+
+            // Computer Choice
+            let computerPlay = Math.floor((Math.random()* 3 ) + 1);
+
+            // Rock = 1, Paper = 2, Scissor = 3
+
+        
+            // User Choice
+            let userPlay  = prompt("Rock, Paper, or Scissors?").toLowerCase();
+
+            
+            function getUserPlay() {
+            if (! userPlay) {
+                return "Cheater! Play Rock, Paper, or Scissors!";
+            } else {
+                return `You played ${userPlay}`;
+            }
+        }
+
+            // Display computer choice
+            function getComputerPlay(computerPlay) {
+            if (computerPlay === 1) {
+                return "Computer played rock";
+            } else if (computerPlay === 2) {
+                return "Computer played paper";
+            } else if (computerPlay === 3) {
+                return "Computer played scissors";
+            } else {
+                return "No idea what just happened";
+            }
+        }
+
+        
+            
+
+            // computerPlay rock scenario
+            function playRound(computerPlay, userPlay) {
+            if (computerPlay === 1 && userPlay === "rock") {
+                return "It's a tie!";
+            } else if (computerPlay === 1 && userPlay === "paper") {
+                return "User wins! Paper beats rock!";
+            } else if (computerPlay === 1 && userPlay === "scissors") {
+                return "Computer wins!, rock beats scissors!";
+            } else if (computerPlay === 2 && userPlay === "rock") {
+                return "Computer wins! Paper beats rock";
+            } else if (computerPlay === 2 && userPlay === "paper") {
+                return "It's a tie!";
+            } else if (computerPlay === 2 && userPlay === "scissors") {
+                return "User wins! Scissors beats paper";
+            } else if (computerPlay === 3 && userPlay === "rock") {
+                return "User wins! Rock beats scissors";
+            } else if (computerPlay === 3 && userPlay === "paper") {
+                return "Computer wins! Scissors beats paper";
+            } else if (computerPlay === 3 && userPlay === "scissors") {
+                return "It's a tie!";
+            } else {
+                return "I dont know what happened";
+            }
+
+            }
+            
+            console.log("You played " + userPlay);
+            console.log(getComputerPlay(computerPlay));
+            console.log(playRound(computerPlay, userPlay));
+            
+
+            
+
+       
+
+
+      
+      
+    
+
+
+
+
+
+
+
+
+
+            
+
+          
+              
+
+       
+
+
+
+    </script>
+
+
+
+   
+    
+    </body>
+
+</html>
